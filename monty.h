@@ -46,6 +46,7 @@ void pall(stack_t **head, unsigned int line_number);
 void pint(stack_t **top, unsigned int line_number);
 void pop(stack_t **top, unsigned int line_number);
 void swap(stack_t **top, unsigned int line_number);
+void add(stack_t **top, unsigned int line_number);
 void free_stack(stack_t *head);
 void (*get_op_func(char *s))(stack_t **, unsigned int);
 void exit_point(int sig, unsigned int line_number, char *str);
