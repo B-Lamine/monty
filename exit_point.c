@@ -9,25 +9,18 @@
 void exit_point(int sig, unsigned int line_number, char *str)
 {
 	if (sig == 0)
-	{
 		fprintf(stderr, "USAGE: monty file\n");
-	}
 	else if (sig == 1)
-	{
 		fprintf(stderr, "Error: Can't open file %s\n", str);
-	}
 	else if (sig == 2)
-	{
 		fprintf(stderr, "Error: malloc failed\n");
-	}
 	else if (sig == 3)
-	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number,
 				str);
-	}
 	else if (sig == 4)
-	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
-	}
+	else if (sig == 5)
+		fprintf(stderr, "L%d: can't pint, stack empty", line_number);
+
 	exit(EXIT_FAILURE);
 }
