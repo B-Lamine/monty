@@ -20,7 +20,6 @@ void exit_point(int sig, unsigned int line_number, char *str)
 	else if (sig == 4)
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 	else if (sig == 5)
-		fprintf(stderr, "L%d: can't pint, stack empty", line_number);
-
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 	exit(EXIT_FAILURE);
 }
