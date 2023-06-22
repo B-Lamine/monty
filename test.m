@@ -1,6 +1,6 @@
-push 10
+push 5
 push 20
-push 300
+push 2
 pall
-sub
+div
 pall
