@@ -25,5 +25,9 @@ void exit_point(int sig, unsigned int line_number, char *str)
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number,
 				str);
 	}
+	else if (sig == 4)
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+	}
 	exit(EXIT_FAILURE);
 }

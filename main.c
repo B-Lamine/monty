@@ -39,6 +39,8 @@ int main(int ac, char *av[])
 		}
 		if (ar[1] != NULL)
 			data = atoi(ar[1]);
+		if ((ar[1] == NULL) || (data == 0))
+			exit_point(4, line_number, NULL);
 		operation(&stack, line_number);
 		line_number++;
 	}
