@@ -26,6 +26,6 @@ void exit_point(int sig, unsigned int line_number, char *str)
 	else if (sig == 7)
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 	else if (sig == 8)
-		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't %s, stack too short\n", line_number, str);
 	exit(EXIT_FAILURE);
 }
