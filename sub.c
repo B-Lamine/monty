@@ -16,6 +16,6 @@ void sub(stack_t **top, unsigned int line_number)
 	pop(top, line_number);
 	b = (*top)->n;
 	pop(top, line_number);
-	data = a - b;
+	data = b - a;
 	push(top, line_number);
 }
